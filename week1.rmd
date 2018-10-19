@@ -1,0 +1,20 @@
+---
+title: "R Markdown and Leaflet"
+author: "M. A."
+date: "19 October 2018"
+output: html_document
+---
+
+```{r, message=FALSE, warning=FALSE}
+library(leaflet)
+```
+
+```{r}
+my_map <- leaflet() %>% addTiles() 
+my_map <- my_map %>% addMarkers(lat=41.9028, lng= 12.4964, popup="Rome")
+my_map <- my_map %>% addMarkers(lat=45.076589, lng= 7.688315, popup="Turin")
+my_map <- my_map %>% addMarkers(lat=45.463886, lng= 9.190781, popup="Milan")
+my_map
+```
+
+
